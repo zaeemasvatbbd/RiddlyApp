@@ -4,15 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b30368eb-fd25-4dc8-8c38-49bf88353187" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/riddly/riddlyapp/controllers/AnswerRiddleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/riddly/riddlyapp/controllers/AnswerRiddleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/riddly/riddlyapp/controllers/PlayerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/riddly/riddlyapp/controllers/PlayerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/riddly/riddlyapp/models/MyKey.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/riddly/riddlyapp/models/MyKey.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/riddly/riddlyapp/repositories/RiddleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/riddly/riddlyapp/repositories/RiddleRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/riddly/riddlyapp/repositories/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/riddly/riddlyapp/repositories/PlayerRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/riddly/riddlyapp/RiddlyAppApplication.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/riddly/riddlyapp/models/User.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/riddly/riddlyapp/repositories/UserRepository.class" beforeDir="false" />
+    <list default="true" id="b30368eb-fd25-4dc8-8c38-49bf88353187" name="Changes" comment="added player controller">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/riddly/riddlyapp/models/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/riddly/riddlyapp/models/Player.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,8 +89,16 @@
       <workItem from="1654783089165" duration="1588000" />
       <workItem from="1654784706442" duration="6192000" />
       <workItem from="1655024105671" duration="4655000" />
-      <workItem from="1655031746619" duration="370000" />
+      <workItem from="1655031746619" duration="1508000" />
     </task>
+    <task id="LOCAL-00001" summary="added player controller">
+      <created>1655032194811</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1655032194811</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -112,5 +114,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="added player controller" />
+    <option name="LAST_COMMIT_MESSAGE" value="added player controller" />
   </component>
 </project>

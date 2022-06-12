@@ -18,7 +18,7 @@ public class Player {
     private String email;
 
     @Column(name = "points")
-    private int points;
+    private long points;
 
 
 }
