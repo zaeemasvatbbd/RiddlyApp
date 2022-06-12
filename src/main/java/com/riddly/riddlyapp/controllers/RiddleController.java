@@ -25,5 +25,20 @@ public class RiddleController {
         return ResponseEntity.ok(riddles);
     }
 
+    //Testing oAuth
+    //Not restricted
+    @GetMapping("/")
+    public String helloWorld(){
+        return "Hello World Now";
+    }
+
+    //Restricted
+    @GetMapping("/restricted")
+    public String restricted(){
+        return "To see this, you have to be logged in!";
+    }
+
+
+
 
 }
