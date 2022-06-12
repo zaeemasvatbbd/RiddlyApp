@@ -4,12 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+
     <list default="true" id="b30368eb-fd25-4dc8-8c38-49bf88353187" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RiddlyApp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/RiddlyApp.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/riddly/riddlyapp/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/riddly/riddlyapp/SecurityConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/riddly/riddlyapp/controllers/RiddleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/riddly/riddlyapp/controllers/RiddleController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+
+    <list default="true" id="b30368eb-fd25-4dc8-8c38-49bf88353187" name="Changes" comment="added player controller with points patch">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,6 +74,7 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
+
   <component name="PropertiesComponent">
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
@@ -78,6 +84,26 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="settings.editor.selected.configurable" value="web.server" />
   </component>
+
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/bbdnet2497/Desktop/RIDDLYAPPP/RiddlyApp",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "spring.configuration.checksum": "9ba6b42f369693fc6c13f13eebb322b8"
+  }
+}]]></component>
+
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.riddly.riddlyapp.controllers" />
@@ -105,10 +131,14 @@
       <workItem from="1654783089165" duration="1588000" />
       <workItem from="1654784706442" duration="6192000" />
       <workItem from="1655024105671" duration="4655000" />
+
       <workItem from="1655031746619" duration="1508000" />
       <workItem from="1655046177531" duration="97000" />
       <workItem from="1655046302125" duration="4642000" />
       <workItem from="1654980221904" duration="5835000" />
+
+      <workItem from="1655031746619" duration="2231000" />
+
     </task>
     <task id="LOCAL-00001" summary="added player controller">
       <created>1655032194811</created>
@@ -117,7 +147,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655032194811</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="added player controller with points patch">
+      <created>1655033299238</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1655033299238</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -136,6 +173,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="added player controller" />
-    <option name="LAST_COMMIT_MESSAGE" value="added player controller" />
+    <MESSAGE value="added player controller with points patch" />
+    <option name="LAST_COMMIT_MESSAGE" value="added player controller with points patch" />
   </component>
 </project>
