@@ -31,7 +31,7 @@ public class AnswerRiddleController {
     @GetMapping("/user")
     public ResponseEntity<List<AnswerRiddle>> getUserAnsweredRiddles(@RequestBody(required = false) Player player){
         if(player != null) {
-            return ResponseEntity.ok(answerRiddleRepository.findByPlayer(player))
+            return ResponseEntity.ok(answerRiddleRepository.findByPlayer(player));
         } else {
             return  ResponseEntity.badRequest().build();
         }
@@ -41,8 +41,7 @@ public class AnswerRiddleController {
     public ResponseEntity<String> addAnsweredRiddle(@RequestBody AnswerRiddle answerRiddle){
         if(answerRiddle == null) return ResponseEntity.badRequest().build();
         answerRiddleRepository.save(answerRiddle);
-
-        return ResponseEntity.ok(String.format("User answered riddle saved successfully"), answerRiddle);
+        return ResponseEntity.ok("User answered riddle saved successfully");
     }
 
 }

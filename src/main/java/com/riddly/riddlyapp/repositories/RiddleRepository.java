@@ -9,7 +9,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface RiddleRepository extends CrudRepository<Riddle, integar>  {
+public interface RiddleRepository extends CrudRepository<Riddle, Integer>  {
     List<Riddle> findAll();
 
 }

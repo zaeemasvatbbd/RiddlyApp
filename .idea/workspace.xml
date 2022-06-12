@@ -5,13 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b30368eb-fd25-4dc8-8c38-49bf88353187" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/riddly/riddlyapp/controllers/AnswerRiddleController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/riddly/riddlyapp/models/AnswerRiddle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/riddly/riddlyapp/models/MyKey.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/riddly/riddlyapp/repositories/AnswerRiddleRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/riddly/riddlyapp/controllers/AnswerRiddleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/riddly/riddlyapp/controllers/AnswerRiddleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/riddly/riddlyapp/controllers/PlayerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/riddly/riddlyapp/controllers/PlayerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/riddly/riddlyapp/models/MyKey.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/riddly/riddlyapp/models/MyKey.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/riddly/riddlyapp/repositories/RiddleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/riddly/riddlyapp/repositories/RiddleRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/riddly/riddlyapp/repositories/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/riddly/riddlyapp/repositories/PlayerRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/riddly/riddlyapp/RiddlyAppApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/riddly/riddlyapp/models/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/riddly/riddlyapp/repositories/UserRepository.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +60,8 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/bbdnet2497/Desktop/old",
+    "last_opened_file_path": "C:/Users/bbdnet2497/Desktop/RIDDLYAPPP/RiddlyApp",
+    "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
@@ -93,6 +95,7 @@
       <workItem from="1654783089165" duration="1588000" />
       <workItem from="1654784706442" duration="6192000" />
       <workItem from="1655024105671" duration="4655000" />
+      <workItem from="1655031746619" duration="370000" />
     </task>
     <servers />
   </component>

@@ -8,10 +8,10 @@ import java.util.List;
 
 
 @Repository
-public interface UserRepository extends CrudRepository<Player, Integer> {
+public interface PlayerRepository extends CrudRepository<Player, Integer> {
 
-    Player findByUsername(String username);
-    Player findByEmail(String email);
+    List<Player> findByUsername(String username);
+    List<Player> findByEmail(String email);
     List<Player> findAll();
 
 }
