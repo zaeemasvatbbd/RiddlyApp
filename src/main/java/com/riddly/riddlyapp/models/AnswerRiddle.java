@@ -7,9 +7,9 @@ import javax.persistence.*;
 @Entity
 public class AnswerRiddle {
     @EmbeddedId
-    private MyKey myKey;
+    private AnswerRiddleKey myKey;
 
-    @Column(name = "PlayerRiddle")
-    private String PlayerRiddle;
+//    @Column(name = "PlayerRiddle")
+//    private String PlayerRiddle;
 
 }

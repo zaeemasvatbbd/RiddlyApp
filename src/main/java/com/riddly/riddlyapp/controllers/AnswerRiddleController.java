@@ -24,18 +24,17 @@ public class AnswerRiddleController {
             return ResponseEntity.badRequest().build();
         }
 
-
         return ResponseEntity.ok(answeredRiddles);
     }
-
-    @GetMapping("/user")
-    public ResponseEntity<List<AnswerRiddle>> getUserAnsweredRiddles(@RequestBody(required = false) Player player){
-        if(player != null) {
-            return ResponseEntity.ok(answerRiddleRepository.findByPlayer(player));
-        } else {
-            return  ResponseEntity.badRequest().build();
-        }
-    }
+//
+//    @GetMapping("/user")
+//    public ResponseEntity<List<AnswerRiddle>> getUserAnsweredRiddles(@RequestBody(required = false) Player player){
+//        if(player != null) {
+//            return ResponseEntity.ok(answerRiddleRepository.findByPlayer(player));
+//        } else {
+//            return  ResponseEntity.badRequest().build();
+//        }
+//    }
 
     @PostMapping("")
     public ResponseEntity<String> addAnsweredRiddle(@RequestBody AnswerRiddle answerRiddle){
