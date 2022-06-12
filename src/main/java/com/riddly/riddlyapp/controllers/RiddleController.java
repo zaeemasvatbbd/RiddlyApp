@@ -15,15 +15,15 @@ public class RiddleController {
 
     RiddleRepository riddleRepository;
 
-    @GetMapping("/riddles")
-    public ResponseEntity<List<Riddle>> getRiddles() {
-        List<Riddle> riddles = riddleRepository.findAll();
-
-        if (riddles == null)
-            return ResponseEntity.badRequest().build();
-
-        return ResponseEntity.ok(riddles);
-    }
+//    @GetMapping("/riddles")
+//    public ResponseEntity<List<Riddle>> getRiddles() {
+//        List<Riddle> riddles = riddleRepository.findAll();
+//
+//        if (riddles == null)
+//            return ResponseEntity.badRequest().build();
+//
+//        return ResponseEntity.ok(riddles);
+//    }
 
     //Testing oAuth
     //Not restricted
@@ -37,6 +37,7 @@ public class RiddleController {
     public String restricted(){
         return "To see this, you have to be logged in!";
     }
+
 
 
 
