@@ -18,36 +18,13 @@ public class SecurityConfig  extends WebSecurityConfigurerAdapter{
     @Override
     public void configure(HttpSecurity httpSecurity) throws Exception{
 
+//permit authority to endpoints with /** (anything after slash)
         httpSecurity.antMatcher("/**").authorizeRequests()
                 .antMatchers("/").permitAll()
                 .anyRequest().authenticated()
                 .and()
                 .oauth2Login();
     }
-
-//    @Bean
-//    public UserDetailsService userDetailsService(){
-//        return new GetMeUserDetailsService();
-//    }
-//
-//    @Bean
-//    public BCryptPasswordEncoder passwordEncoder(){
-//        return new BCryptPasswordEncoder();
-//    }
-//    @Bean
-//    public SecurityFilterChain filterChain(HttpSecurity http) throws Exception{
-//
-//        http.authorizeRequests(authorize -> authorize.anyRequest().authenticated()
-//        )
-//                .formLogin(withDefaults()).httpBasic(withDefaults());
-//
-//        return http.build();
-//    }
-//
-//    @Bean
-//    public WebSecurityCustomizer webSecurityCustomizer(){
-//
-//    }
 
 }
 

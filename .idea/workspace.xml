@@ -6,6 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="b30368eb-fd25-4dc8-8c38-49bf88353187" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RiddlyApp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/RiddlyApp.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/riddly/riddlyapp/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/riddly/riddlyapp/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/riddly/riddlyapp/controllers/RiddleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/riddly/riddlyapp/controllers/RiddleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
