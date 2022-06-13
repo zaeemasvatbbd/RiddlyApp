@@ -37,7 +37,7 @@ VALUES  ('Amanda', 'amanda@gmail.com', 0),
 		('John', 'john@gmail.com', 20),
 		('Jack', 'jack@gmail.com',20)
 
-INSERT INTO [Riddles] (question, answer, username)
+INSERT INTO [Riddles] (question, answer)
 Values('I’m tall when I’m young, and I’m short when I’m old. What am I?','Candle'),
 	  ('The more of this there is, the less you see. What is it?','Darkness'),
 	  ('David’s parents have three sons: Snap, Crackle, and what’s the name of the third son?','David'),
