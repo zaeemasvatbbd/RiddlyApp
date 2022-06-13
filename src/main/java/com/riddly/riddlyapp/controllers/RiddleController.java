@@ -18,11 +18,7 @@ public class RiddleController {
     @GetMapping("/riddles")
     public ResponseEntity<List<Riddle>> getRiddles() {
         List<Riddle> riddles = riddleRepository.findAll();
-
-        if (riddles == null)
-            return ResponseEntity.badRequest().build();
-
-        return ResponseEntity.ok(riddles);
+        return riddles == null ? ResponseEntity.badRequest().build() : ResponseEntity.ok(riddles);
     }
 
 
