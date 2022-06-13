@@ -4,6 +4,7 @@ import com.riddly.riddlyapp.models.AnsweredRiddle;
 import com.riddly.riddlyapp.models.Player;
 import com.riddly.riddlyapp.models.Riddle;
 import com.riddly.riddlyapp.repositories.AnsweredRiddleRepository;
+import com.riddly.riddlyapp.repositories.RiddleRepository;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -15,6 +16,8 @@ import java.util.List;
 public class AnsweredRiddleController {
 
     AnsweredRiddleRepository answerRiddleRepository;
+
+    private AnsweredRiddleController(AnsweredRiddleRepository answerRiddleRepository) { this.answerRiddleRepository = answerRiddleRepository; }
 
     @GetMapping("")
     public ResponseEntity<List<AnsweredRiddle>> getAnsweredRiddles(

@@ -15,6 +15,8 @@ public class RiddleController {
 
     RiddleRepository riddleRepository;
 
+    private RiddleController(RiddleRepository riddleRepository) { this.riddleRepository = riddleRepository; }
+
     @GetMapping("/riddles")
     public ResponseEntity<List<Riddle>> getRiddles() {
         List<Riddle> riddles = riddleRepository.findAll();

@@ -16,6 +16,9 @@ public class PlayerController {
 
     PlayerRepository playerRepository;
 
+    private PlayerController(PlayerRepository playerRepository) { this.playerRepository = playerRepository; }
+
+
     @GetMapping("")
     public ResponseEntity<List<Player>> getPlayers() {
         List<Player> players = playerRepository.findAll();
