@@ -26,4 +26,20 @@ public class RiddleController {
     }
 
 
+    //Testing oAuth Code
+
+    //Not restricted
+    @GetMapping("/")
+    public String withoutAuth(){
+        return "Hello World Now";
+    }
+
+    //Restricted
+    @GetMapping("/restricted")
+    public String withAuth(){
+        return "To see this, you have to be logged in!";
+    }
+
+
+
 }

@@ -4,13 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+
+    <list default="true" id="b30368eb-fd25-4dc8-8c38-49bf88353187" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RiddlyApp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/RiddlyApp.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/riddly/riddlyapp/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/riddly/riddlyapp/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/riddly/riddlyapp/controllers/RiddleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/riddly/riddlyapp/controllers/RiddleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+
     <list default="true" id="b30368eb-fd25-4dc8-8c38-49bf88353187" name="Changes" comment="added player controller with points patch">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+
+
       <change beforePath="$PROJECT_DIR$/RiddlyApp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/RiddlyApp.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/riddly/riddlyapp/controllers/AnswerRiddleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/riddly/riddlyapp/controllers/AnswerRiddleController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/riddly/riddlyapp/models/AnswerRiddle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/riddly/riddlyapp/models/AnswerRiddle.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/riddly/riddlyapp/models/MyKey.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/riddly/riddlyapp/models/MyKey.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/riddly/riddlyapp/repositories/AnswerRiddleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/riddly/riddlyapp/repositories/AnswerRiddleRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +37,24 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <excluded-from-favorite>
+      <branch-storage>
+        <map>
+          <entry type="LOCAL">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="master" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </excluded-from-favorite>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="JpbToolWindowState">
@@ -52,6 +82,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
+
+  <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="web.server" />
+  </component>
+
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RequestMappingsPanelOrder0": "0",
@@ -70,16 +111,19 @@
     "spring.configuration.checksum": "9ba6b42f369693fc6c13f13eebb322b8"
   }
 }]]></component>
+
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.riddly.riddlyapp.controllers" />
     </key>
   </component>
   <component name="RunManager">
+    <configuration name="Unnamed" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
     <configuration name="RiddlyApp" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <option name="ACTIVE_PROFILES" />
       <module name="RiddlyApp" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.riddly.riddlyapp.RiddlyAppApplication" />
+      <option name="ACTIVE_PROFILES" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -97,7 +141,15 @@
       <workItem from="1654783089165" duration="1588000" />
       <workItem from="1654784706442" duration="6192000" />
       <workItem from="1655024105671" duration="4655000" />
+
+      <workItem from="1655031746619" duration="1508000" />
+      <workItem from="1655046177531" duration="97000" />
+      <workItem from="1655046302125" duration="4642000" />
+      <workItem from="1654980221904" duration="5835000" />
+
       <workItem from="1655031746619" duration="2231000" />
+
+
       <workItem from="1655067100950" duration="191000" />
     </task>
     <task id="LOCAL-00001" summary="added player controller">

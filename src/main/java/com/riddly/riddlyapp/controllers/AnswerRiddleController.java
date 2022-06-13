@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+//Auth applied on any endpoint (/**)
 @RestController
 @RequestMapping("riddly/riddles/answered")
 public class AnswerRiddleController {
