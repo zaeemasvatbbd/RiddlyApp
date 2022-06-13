@@ -6,14 +6,14 @@ import javax.persistence.*;
 import java.io.Serializable;
 
 @Embeddable
-@Data
+//@Data
 public class AnswerRiddleKey implements Serializable {
 
-    @ManyToOne()
+    @OneToOne()
     @JoinColumn(name = "username", nullable = false)
     private Player player;
 
-    @ManyToOne()
+    @OneToOne()
     @JoinColumn(name = "riddleID", nullable = false)
     private Riddle riddle;
 
