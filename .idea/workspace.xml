@@ -4,9 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="b30368eb-fd25-4dc8-8c38-49bf88353187" name="Changes" comment="added player controller">
       <change afterPath="$PROJECT_DIR$/.idea/aws.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+=======
+    <list default="true" id="b30368eb-fd25-4dc8-8c38-49bf88353187" name="Changes" comment="fixed some issues in AnsweredRiddleController and AnsweredRiddleRepository and refactored various endpoints">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/riddly/riddlyapp/controllers/AnsweredRiddleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/riddly/riddlyapp/controllers/AnsweredRiddleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/riddly/riddlyapp/models/AnswerRiddleKey.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/riddly/riddlyapp/models/AnswerRiddleKey.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/riddly/riddlyapp/models/AnsweredRiddle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/riddly/riddlyapp/models/AnsweredRiddle.java" afterDir="false" />
+>>>>>>> 0fe6a227dc8721e6e7444d49debd87189d9f040a
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +29,7 @@
     </option>
   </component>
   <component name="Git.Settings">
+<<<<<<< HEAD
     <excluded-from-favorite>
       <branch-storage>
         <map>
@@ -38,6 +47,13 @@
       <map>
         <entry key="$PROJECT_DIR$" value="master" />
       </map>
+=======
+    <option name="PUSH_TAGS">
+      <GitPushTagMode>
+        <option name="argument" value="--follow-tags" />
+        <option name="title" value="Current Branch" />
+      </GitPushTagMode>
+>>>>>>> 0fe6a227dc8721e6e7444d49debd87189d9f040a
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -66,6 +82,7 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
+<<<<<<< HEAD
   <component name="PropertiesComponent">
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
@@ -75,6 +92,27 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="settings.editor.selected.configurable" value="web.server" />
   </component>
+=======
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/bbdnet2497/Desktop/RIDDLYAPPP/temp/RiddlyApp",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "vcs.Git",
+    "spring.configuration.checksum": "9ba6b42f369693fc6c13f13eebb322b8"
+  }
+}]]></component>
+>>>>>>> 0fe6a227dc8721e6e7444d49debd87189d9f040a
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.riddly.riddlyapp.controllers" />
@@ -115,7 +153,25 @@
       <option name="project" value="LOCAL" />
       <updated>1655032194811</updated>
     </task>
+<<<<<<< HEAD
     <option name="localTasksCounter" value="2" />
+=======
+    <task id="LOCAL-00002" summary="added player controller with points patch">
+      <created>1655033299238</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1655033299238</updated>
+    </task>
+    <task id="LOCAL-00003" summary="fixed some issues in AnsweredRiddleController and AnsweredRiddleRepository and refactored various endpoints">
+      <created>1655137215374</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1655137215374</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
+>>>>>>> 0fe6a227dc8721e6e7444d49debd87189d9f040a
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -134,6 +190,12 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="added player controller" />
+<<<<<<< HEAD
     <option name="LAST_COMMIT_MESSAGE" value="added player controller" />
+=======
+    <MESSAGE value="added player controller with points patch" />
+    <MESSAGE value="fixed some issues in AnsweredRiddleController and AnsweredRiddleRepository and refactored various endpoints" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed some issues in AnsweredRiddleController and AnsweredRiddleRepository and refactored various endpoints" />
+>>>>>>> 0fe6a227dc8721e6e7444d49debd87189d9f040a
   </component>
 </project>
