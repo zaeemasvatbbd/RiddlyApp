@@ -24,8 +24,8 @@ public class AnsweredRiddleController {
 
         List<AnsweredRiddle> answeredRiddles =
                 player != null ? answerRiddleRepository.findByAnsweredRiddleIdPlayer(player) :
-                        riddle != null ? answerRiddleRepository.findByAnsweredRiddleIdRiddle(riddle) :
-                                answerRiddleRepository.findAll();
+                riddle != null ? answerRiddleRepository.findByAnsweredRiddleIdRiddle(riddle) :
+                answerRiddleRepository.findAll();
 
         return answeredRiddles == null ? ResponseEntity.badRequest().build() : ResponseEntity.ok(answeredRiddles);
     }
