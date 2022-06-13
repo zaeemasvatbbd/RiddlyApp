@@ -38,12 +38,12 @@ VALUES  ('Amanda', 'amanda@gmail.com', 0),
 		('Jack', 'jack@gmail.com',20)
 
 INSERT INTO [Riddles] (question, answer, username)
-Values('I’m tall when I’m young, and I’m short when I’m old. What am I?','Candle','Amanda'), 
-	  ('The more of this there is, the less you see. What is it?','Darkness','John'), 
-	  ('David’s parents have three sons: Snap, Crackle, and what’s the name of the third son?','David','Amanda'), 
-	  ('It stalks the countryside with ears that can’t hear. What is it?', 'Corn', 'John'), 
-	  ('I am an odd number. Take away a letter and I become even. What number am I?','Seven','John'), 
-	  ('If two’s company, and three’s a crowd, what are four and five?','Nine','Amanda')
+Values('I’m tall when I’m young, and I’m short when I’m old. What am I?','Candle'),
+	  ('The more of this there is, the less you see. What is it?','Darkness'),
+	  ('David’s parents have three sons: Snap, Crackle, and what’s the name of the third son?','David'),
+	  ('It stalks the countryside with ears that can’t hear. What is it?', 'Corn'),
+	  ('I am an odd number. Take away a letter and I become even. What number am I?','Seven'),
+	  ('If two’s company, and three’s a crowd, what are four and five?','Nine')
 
 INSERT INTO [Answered_Riddles] (riddleID, username)
 VALUES	(1, 'Jack'),
