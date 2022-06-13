@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b30368eb-fd25-4dc8-8c38-49bf88353187" name="Changes" comment="updated answered riddle">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/riddly/riddlyapp/controllers/RiddleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/riddly/riddlyapp/controllers/RiddleController.java" afterDir="false" />
-    </list>
+    <list default="true" id="b30368eb-fd25-4dc8-8c38-49bf88353187" name="Changes" comment="added constructors to controllers" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -131,7 +128,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655145166067</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="added constructors to controllers">
+      <created>1655147868544</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1655147868544</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -153,6 +157,7 @@
     <MESSAGE value="added player controller with points patch" />
     <MESSAGE value="fixed some issues in AnsweredRiddleController and AnsweredRiddleRepository and refactored various endpoints" />
     <MESSAGE value="updated answered riddle" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated answered riddle" />
+    <MESSAGE value="added constructors to controllers" />
+    <option name="LAST_COMMIT_MESSAGE" value="added constructors to controllers" />
   </component>
 </project>
