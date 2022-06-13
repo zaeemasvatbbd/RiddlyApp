@@ -11,7 +11,7 @@ GO
 USE RiddlyDB;
 GO
 
-CREATE TABLE [Player] (
+CREATE TABLE Player (
 	username VARCHAR(20) PRIMARY KEY ,
 	email VARCHAR(100) NOT NULL,
 	points INT
@@ -21,8 +21,6 @@ CREATE TABLE Riddles (
 	riddleID INT PRIMARY KEY IDENTITY(1,1),
 	question VARCHAR(MAX) NOT NULL,
 	answer VARCHAR(50) NOT NULL,
-	username VARCHAR(20) NOT NULL,
-	FOREIGN KEY (username) REFERENCES [Player] (username)
 );
 
 CREATE TABLE Answered_Riddles (
