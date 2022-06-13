@@ -12,7 +12,7 @@ import java.util.List;
 public interface AnswerRiddleRepository extends CrudRepository<AnswerRiddle, String> {
     List<AnswerRiddle> findAll();
 
-    List<AnswerRiddle> findByPlayer(Player player);
+//    List<AnswerRiddle> findByPlayer(Player player);
 
 
 }
