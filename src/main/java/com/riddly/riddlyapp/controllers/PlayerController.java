@@ -17,42 +17,46 @@ public class PlayerController {
     PlayerRepository playerRepository;
 
     @GetMapping("")
-    public ResponseEntity<List<Player>> getPlayer(
-            @RequestParam(required = false) String username,
-            @RequestParam(required = false) String email
-    ) {
+    public ResponseEntity<List<Player>> getPlayers() {
+        List<Player> players = playerRepository.findAll();
+        return players == null ? ResponseEntity.badRequest().build() : ResponseEntity.ok(players);
 
-        if (username != null)
-            return ResponseEntity.ok(playerRepository.findByUsername(username));
+    }
 
-        if (email != null)
-            return ResponseEntity.ok(playerRepository.findByEmail(email));
-
-        return ResponseEntity.ok(playerRepository.findAll());
-
+    @GetMapping("{username}")
+    public ResponseEntity<Player> getPlayer(@PathVariable String username) {
+        List<Player> players = playerRepository.findByUsername(username);
+        return players == null ? ResponseEntity.badRequest().build() :
+               players.size() <= 0 ? ResponseEntity.notFound().build() :
+               ResponseEntity.ok(players.get(0));
     }
 
     @PostMapping("")
     public ResponseEntity<String> addPlayer(@RequestBody Player player) {
         if (player == null) return ResponseEntity.badRequest().build();
         playerRepository.save(player);
-        return ResponseEntity.ok(String.format("Rental %s saved successfully", player));
+        return ResponseEntity.ok(String.format("Player %s saved successfully", player));
     }
 
-    @PatchMapping("{id}")
+    @PatchMapping("{username}")
     public ResponseEntity<String> updatePlayerPoints(
-            @PathVariable Integer id,
+            @PathVariable String username,
             @RequestParam Boolean hasAnsweredCorrectly,
             @RequestParam Integer numAttempts,
             @RequestParam Long timeTaken) {
 
-        Player player = playerRepository.findAll().get(id);
-        if (player == null)
+        List<Player> players = playerRepository.findByUsername(username);
+
+        if (players == null)
             return ResponseEntity.badRequest().build();
 
-        final int basePoints = 100;
+        if (players.size() <= 0)
+            return ResponseEntity.notFound().build();
+
+        Player player = players.get(0);
 
         if (hasAnsweredCorrectly) {
+            final int basePoints = 100;
             long addedPoints = basePoints / numAttempts + basePoints / timeTaken;
             player.setPoints(player.getPoints() + addedPoints);
             playerRepository.save(player);

@@ -1,9 +1,12 @@
 package com.riddly.riddlyapp.models;
 
+import lombok.Data;
+
 import javax.persistence.*;
 import java.io.Serializable;
 
 @Embeddable
+@Data
 public class AnswerRiddleKey implements Serializable {
 
     @ManyToOne()

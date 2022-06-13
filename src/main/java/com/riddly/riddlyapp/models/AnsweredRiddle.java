@@ -5,9 +5,9 @@ import lombok.*;
 import javax.persistence.*;
 @Data
 @Entity
-public class AnswerRiddle {
+public class AnsweredRiddle {
     @EmbeddedId
-    private AnswerRiddleKey myKey;
+    private AnswerRiddleKey answeredRiddleId;
 
 //    @Column(name = "PlayerRiddle")
 //    private String PlayerRiddle;
