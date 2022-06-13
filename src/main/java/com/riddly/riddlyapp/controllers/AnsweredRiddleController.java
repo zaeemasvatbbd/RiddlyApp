@@ -13,8 +13,8 @@ import java.util.List;
 @RestController
 @RequestMapping("riddly/riddles/answered")
 public class AnsweredRiddleController {
-
     AnsweredRiddleRepository answerRiddleRepository;
+    private AnsweredRiddleController(AnsweredRiddleRepository answerRiddleRepository) { this.answerRiddleRepository = answerRiddleRepository; }
 
     @GetMapping("")
     public ResponseEntity<List<AnsweredRiddle>> getAnsweredRiddles(
