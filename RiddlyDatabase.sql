@@ -34,7 +34,7 @@ CREATE TABLE Answered_Riddles (
 );
 
 
-INSERT INTO [User] (username, email, points)
+INSERT INTO [Player] (username, email, points)
 VALUES  ('Amanda', 'amanda@gmail.com', 0),
 		('John', 'john@gmail.com', 20),
 		('Jack', 'jack@gmail.com',20)
