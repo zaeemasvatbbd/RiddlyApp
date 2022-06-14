@@ -1,6 +1,6 @@
 INSERT INTO dbo.player(username, email, points)
 VALUES  ('Amanda', 'amanda@gmail.com', 0),
-		('John', 'john@gmail.com', 20)
+		('John', 'john@gmail.com', 0)
 
 INSERT INTO dbo.riddle(riddle, answer)
 Values('I’m tall when I’m young, and I’m short when I’m old. What am I?','Candle'), 
@@ -9,7 +9,3 @@ Values('I’m tall when I’m young, and I’m short when I’m old. What am I?'
 	  ('It stalks the countryside with ears that can’t hear. What is it?', 'Corn'), 
 	  ('I am an odd number. Take away a letter and I become even. What number am I?','Seven'), 
 	  ('If two’s company, and three’s a crowd, what are four and five?','Nine')
-
-INSERT INTO dbo.answered_riddle(riddleID, username)
-VALUES	(1, 'Amanda'),
-		(1, 'John')
