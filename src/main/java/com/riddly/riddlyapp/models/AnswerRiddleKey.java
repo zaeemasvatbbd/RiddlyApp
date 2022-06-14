@@ -7,7 +7,7 @@ import javax.persistence.*;
 import java.io.Serializable;
 
 @Embeddable
-@Getter
+@Data
 public class AnswerRiddleKey implements Serializable {
 
     @ManyToOne()
