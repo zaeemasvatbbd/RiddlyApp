@@ -4,6 +4,7 @@ import com.riddly.riddlyapp.models.AnsweredRiddle;
 import com.riddly.riddlyapp.models.Player;
 import com.riddly.riddlyapp.models.Riddle;
 import com.riddly.riddlyapp.repositories.AnsweredRiddleRepository;
+import com.riddly.riddlyapp.repositories.PlayerRepository;
 import com.riddly.riddlyapp.repositories.RiddleRepository;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -18,11 +19,14 @@ import java.util.stream.Collectors;
 public class RiddleController {
 
     RiddleRepository riddleRepository;
+    PlayerRepository playerRepository;
     AnsweredRiddleRepository answeredRiddleRepository;
 
     private RiddleController(
+            PlayerRepository playerRepository,
             RiddleRepository riddleRepository,
             AnsweredRiddleRepository answeredRiddleRepository) {
+        this.playerRepository = playerRepository;
         this.riddleRepository = riddleRepository;
         this.answeredRiddleRepository = answeredRiddleRepository;
     }
@@ -33,9 +37,10 @@ public class RiddleController {
         return riddles == null ? ResponseEntity.badRequest().build() : ResponseEntity.ok(riddles);
     }
 
-    @GetMapping("/riddles/")
-    public ResponseEntity<Riddle> getRandomRiddleForUser(@RequestBody Player player) {
+    @GetMapping("/riddle/")
+    public ResponseEntity<Riddle> getRandomRiddleForUser(@RequestParam String username) {
 
+        Player player = playerRepository.findByUsername(username);
         if (player == null) return ResponseEntity.badRequest().build();
 
         List<AnsweredRiddle> answeredRiddles = answeredRiddleRepository.findByAnsweredRiddleIdPlayer(player);
