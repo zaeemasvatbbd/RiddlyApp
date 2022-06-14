@@ -9,9 +9,7 @@ import com.riddly.riddlyapp.repositories.RiddleRepository;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
+import java.util.*;
 import java.util.stream.Collectors;
 
 @RestController
@@ -37,21 +35,21 @@ public class RiddleController {
         return riddles == null ? ResponseEntity.badRequest().build() : ResponseEntity.ok(riddles);
     }
 
-    @GetMapping("/riddle/")
+    @GetMapping("/riddle")
     public ResponseEntity<Riddle> getRandomRiddleForUser(@RequestParam String username) {
 
         Player player = playerRepository.findByUsername(username);
         if (player == null) return ResponseEntity.badRequest().build();
 
+        List<Riddle> riddles = riddleRepository.findAll();
+        if (riddles == null) return ResponseEntity.badRequest().build();
+
         List<AnsweredRiddle> answeredRiddles = answeredRiddleRepository.findByAnsweredRiddleIdPlayer(player);
-
         if (answeredRiddles == null) return ResponseEntity.badRequest().build();
+        HashSet<Integer> riddlesAlreadySolved = new HashSet<>();
+        answeredRiddles.forEach(answeredRiddle -> riddlesAlreadySolved.add(answeredRiddle.getAnsweredRiddleId().getRiddle().getRiddleID()));
 
-        ArrayList<Riddle> filteredRiddles = new ArrayList<>();
-        answeredRiddles.stream()
-                .filter(answeredRiddle -> answeredRiddle.getAnsweredRiddleId().getPlayer().getUsername().equals(player.getUsername()))
-                .map(answeredRiddle -> filteredRiddles.add(answeredRiddle.getAnsweredRiddleId().getRiddle()));
-
+        List<Riddle> filteredRiddles = riddles.stream().filter(riddle -> !riddlesAlreadySolved.contains(riddle.getRiddleID())).toList();
         return ResponseEntity.ok( filteredRiddles.isEmpty() ? new Riddle() : filteredRiddles.get(new Random().nextInt(filteredRiddles.size())));
 
     }
