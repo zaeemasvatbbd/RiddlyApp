@@ -9,19 +9,6 @@ import java.io.Serializable;
 @Entity
 public class AnsweredRiddle {
 
-    @Embeddable
-    static class AnswerRiddleKey implements Serializable {
-
-        @ManyToOne()
-        @JoinColumn(name = "username", nullable = false)
-        private Player player;
-
-        @ManyToOne()
-        @JoinColumn(name = "riddleID", nullable = false)
-        private Riddle riddle;
-
-    }
-
     @EmbeddedId
     private AnswerRiddleKey answeredRiddleId;
 
