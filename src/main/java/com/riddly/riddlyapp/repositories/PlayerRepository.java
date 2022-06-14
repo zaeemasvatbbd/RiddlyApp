@@ -11,6 +11,7 @@ import java.util.List;
 public interface PlayerRepository extends CrudRepository<Player, Integer> {
 
     Player findByUsername(String username);
+    List <Player> findPlayerByUsername(String username);
     List<Player> findByEmail(String email);
     List<Player> findAll();
 

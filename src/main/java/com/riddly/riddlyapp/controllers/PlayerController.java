@@ -49,7 +49,7 @@ public class PlayerController {
     public ResponseEntity<String> addPlayer(@RequestBody Player player) {
         if (player == null) return ResponseEntity.badRequest().build();
         player.setPoints(0);
-        if(!playerRepository.findByUsername(player.getUsername()).isEmpty()){
+        if(!playerRepository.findPlayerByUsername(player.getUsername()).isEmpty()){
             return ResponseEntity.badRequest().body("Username already exists");
         }
         if(!playerRepository.findByEmail(player.getEmail()).isEmpty()){
