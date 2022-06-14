@@ -5,12 +5,11 @@ import com.riddly.riddlyapp.models.Player;
 import com.riddly.riddlyapp.models.Riddle;
 import com.riddly.riddlyapp.repositories.AnsweredRiddleRepository;
 import com.riddly.riddlyapp.repositories.RiddleRepository;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
+import java.util.*;
 import java.util.stream.Collectors;
 
 @RestController
@@ -25,6 +24,18 @@ public class RiddleController {
             AnsweredRiddleRepository answeredRiddleRepository) {
         this.riddleRepository = riddleRepository;
         this.answeredRiddleRepository = answeredRiddleRepository;
+    }
+
+    @GetMapping("/login")
+    public String login(){
+        return "/login";
+    }
+
+    @GetMapping("/noauth")
+    public ResponseEntity<?> noAuth() {
+        Map<String, String> body = new HashMap<>();
+        body.put("message", "unauthorized");
+        return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(body);
     }
 
     @GetMapping("/riddles")
@@ -50,6 +61,8 @@ public class RiddleController {
         return ResponseEntity.ok( filteredRiddles.isEmpty() ? new Riddle() : filteredRiddles.get(new Random().nextInt(filteredRiddles.size())));
 
     }
+
+
 
 
 }
