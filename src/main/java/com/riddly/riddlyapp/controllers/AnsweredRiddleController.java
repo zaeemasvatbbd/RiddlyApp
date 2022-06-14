@@ -7,6 +7,7 @@ import com.riddly.riddlyapp.models.Riddle;
 import com.riddly.riddlyapp.repositories.AnsweredRiddleRepository;
 import com.riddly.riddlyapp.repositories.PlayerRepository;
 import com.riddly.riddlyapp.repositories.RiddleRepository;
+import lombok.Data;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -32,6 +33,7 @@ public class AnsweredRiddleController {
         this.riddleRepository = riddleRepository;
     }
 
+    @Data
     static class addAnsweredRiddlePayload {
         String username;
         Integer riddleID;
@@ -70,13 +72,13 @@ public class AnsweredRiddleController {
         Optional<Riddle> riddle = riddleRepository.findById(payload.riddleID);
         if(riddle.isEmpty()) return ResponseEntity.badRequest().build();
 
-
         AnswerRiddleKey answerRiddleKey = new AnswerRiddleKey();
         answerRiddleKey.setRiddle(riddle.get());
         answerRiddleKey.setPlayer(player);
 
         AnsweredRiddle answeredRiddle = new AnsweredRiddle();
         answeredRiddle.setAnsweredRiddleId(answerRiddleKey);
+        System.out.println(answeredRiddle);
         answerRiddleRepository.save(answeredRiddle);
 
         return ResponseEntity.ok(String.format("%s's attempt for the riddle '%s' has been recorded!", payload.username, riddle.get().getRiddleDescription()));
