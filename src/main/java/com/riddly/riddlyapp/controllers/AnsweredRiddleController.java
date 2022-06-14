@@ -7,6 +7,9 @@ import com.riddly.riddlyapp.models.Riddle;
 import com.riddly.riddlyapp.repositories.AnsweredRiddleRepository;
 import com.riddly.riddlyapp.repositories.PlayerRepository;
 import com.riddly.riddlyapp.repositories.RiddleRepository;
+import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -32,6 +35,7 @@ public class AnsweredRiddleController {
         this.riddleRepository = riddleRepository;
     }
 
+    @Data
     static class addAnsweredRiddlePayload {
         String username;
         Integer riddleID;
