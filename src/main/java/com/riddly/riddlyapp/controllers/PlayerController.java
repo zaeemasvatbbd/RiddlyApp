@@ -40,10 +40,9 @@ public class PlayerController {
 
     @GetMapping("/{username}")
     public ResponseEntity<Player> getPlayer(@PathVariable String username) {
-        List<Player> players = playerRepository.findByUsername(username);
-        return players == null ? ResponseEntity.badRequest().build() :
-               players.size() <= 0 ? ResponseEntity.notFound().build() :
-               ResponseEntity.ok(players.get(0));
+        Player player = playerRepository.findByUsername(username);
+        return player == null ? ResponseEntity.badRequest().build() :
+               ResponseEntity.ok(player);
     }
 
     @PostMapping("")
@@ -58,17 +57,13 @@ public class PlayerController {
             @PathVariable String username,
             @RequestBody updatePlayerPointsPayload payload) {
 
-        List<Player> players = playerRepository.findByUsername(username);
+        Player player = playerRepository.findByUsername(username);
 
-        if (players == null)
+        if (player == null)
             return ResponseEntity.badRequest().build();
 
-        if (players.size() <= 0)
-            return ResponseEntity.notFound().build();
-
-        Player player = players.get(0);
-
         if (payload.hasAnsweredCorrectly) {
+
             final int basePoints = 100;
             long addedPoints = basePoints / payload.numAttempts + basePoints / payload.timeTaken;
             player.setPoints(player.getPoints() + addedPoints);
