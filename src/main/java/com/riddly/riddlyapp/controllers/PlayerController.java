@@ -38,7 +38,7 @@ public class PlayerController {
 
     }
 
-    @GetMapping("{username}")
+    @GetMapping("/{username}")
     public ResponseEntity<Player> getPlayer(@PathVariable String username) {
         List<Player> players = playerRepository.findByUsername(username);
         return players == null ? ResponseEntity.badRequest().build() :
@@ -53,10 +53,10 @@ public class PlayerController {
         return ResponseEntity.ok(String.format("Player %s saved successfully", player));
     }
 
-    @PatchMapping("{username}")
+    @PatchMapping("/{username}")
     public ResponseEntity<String> updatePlayerPoints(
             @PathVariable String username,
-            updatePlayerPointsPayload payload) {
+            @RequestBody updatePlayerPointsPayload payload) {
 
         List<Player> players = playerRepository.findByUsername(username);
 
