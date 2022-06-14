@@ -13,13 +13,13 @@ import javax.persistence.Table;
 public class Player {
 
     @Id
-    @Column(name = "username", nullable = false)
+    @Column(name = "username", nullable = false, unique = true)
     private String username;
 
     @Column(name = "email")
     private String email;
 
-    @Column(name = "points")
+    @Column(name = "points", nullable = true)
     private long points;
 
 
