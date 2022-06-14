@@ -1,5 +1,6 @@
 package com.riddly.riddlyapp.controllers;
 
+import com.riddly.riddlyapp.models.AnswerRiddleKey;
 import com.riddly.riddlyapp.models.AnsweredRiddle;
 import com.riddly.riddlyapp.models.Player;
 import com.riddly.riddlyapp.models.Riddle;
@@ -54,10 +55,27 @@ public class AnsweredRiddleController {
     }
 
     @PostMapping("")
-    public ResponseEntity<String> addAnsweredRiddle(@RequestBody AnsweredRiddle answerRiddle){
-        if (answerRiddle == null) return ResponseEntity.badRequest().build();
-        answerRiddleRepository.save(answerRiddle);
-        return ResponseEntity.ok("User answered riddle saved successfully");
+    public ResponseEntity<String> addAnsweredRiddle(
+            @RequestParam String username,
+            @RequestParam Integer riddleID
+    ) {
+
+        Player player = playerRepository.findByUsername(username);
+        if (player == null) return ResponseEntity.badRequest().build();
+
+        Optional<Riddle> riddle = riddleRepository.findById(riddleID);
+        if(riddle.isEmpty()) return ResponseEntity.badRequest().build();
+
+
+        AnswerRiddleKey answerRiddleKey = new AnswerRiddleKey();
+        answerRiddleKey.setRiddle(riddle.get());
+        answerRiddleKey.setPlayer(player);
+
+        AnsweredRiddle answeredRiddle = new AnsweredRiddle();
+        answeredRiddle.setAnsweredRiddleId(answerRiddleKey);
+        answerRiddleRepository.save(answeredRiddle);
+
+        return ResponseEntity.ok(String.format("%s's attempt for the riddle '%s' has been recorded!", username, riddle.get().getRiddleDescription()));
     }
 
 }
