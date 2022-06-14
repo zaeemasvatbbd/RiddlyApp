@@ -32,6 +32,11 @@ public class AnsweredRiddleController {
         this.riddleRepository = riddleRepository;
     }
 
+    static class addAnsweredRiddlePayload {
+        String username;
+        Integer riddleID;
+    }
+
     @GetMapping("")
     public ResponseEntity<List<AnsweredRiddle>> getAnsweredRiddles(
             @RequestParam(required = false) String username,
@@ -56,14 +61,13 @@ public class AnsweredRiddleController {
 
     @PostMapping("")
     public ResponseEntity<String> addAnsweredRiddle(
-            @RequestParam String username,
-            @RequestParam Integer riddleID
+            @RequestBody addAnsweredRiddlePayload payload
     ) {
 
-        Player player = playerRepository.findByUsername(username);
+        Player player = playerRepository.findByUsername(payload.username);
         if (player == null) return ResponseEntity.badRequest().build();
 
-        Optional<Riddle> riddle = riddleRepository.findById(riddleID);
+        Optional<Riddle> riddle = riddleRepository.findById(payload.riddleID);
         if(riddle.isEmpty()) return ResponseEntity.badRequest().build();
 
 
@@ -75,7 +79,7 @@ public class AnsweredRiddleController {
         answeredRiddle.setAnsweredRiddleId(answerRiddleKey);
         answerRiddleRepository.save(answeredRiddle);
 
-        return ResponseEntity.ok(String.format("%s's attempt for the riddle '%s' has been recorded!", username, riddle.get().getRiddleDescription()));
+        return ResponseEntity.ok(String.format("%s's attempt for the riddle '%s' has been recorded!", payload.username, riddle.get().getRiddleDescription()));
     }
 
 }
