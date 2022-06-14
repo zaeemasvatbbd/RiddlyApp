@@ -4,6 +4,8 @@ import com.riddly.riddlyapp.models.Player;
 import com.riddly.riddlyapp.models.Riddle;
 import com.riddly.riddlyapp.repositories.PlayerRepository;
 import com.riddly.riddlyapp.repositories.RiddleRepository;
+import lombok.Getter;
+import lombok.Setter;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -18,6 +20,16 @@ public class PlayerController {
 
     private PlayerController(PlayerRepository playerRepository) { this.playerRepository = playerRepository; }
 
+    @Getter
+    @Setter
+    static class updatePlayerPointsPayload{
+
+        Boolean hasAnsweredCorrectly;
+        Integer numAttempts;
+        Long timeTaken;
+
+    }
+
 
     @GetMapping("")
     public ResponseEntity<List<Player>> getPlayers() {
@@ -26,7 +38,7 @@ public class PlayerController {
 
     }
 
-    @GetMapping("{username}")
+    @GetMapping("/{username}")
     public ResponseEntity<Player> getPlayer(@PathVariable String username) {
         List<Player> players = playerRepository.findByUsername(username);
         return players == null ? ResponseEntity.badRequest().build() :
@@ -41,12 +53,10 @@ public class PlayerController {
         return ResponseEntity.ok(String.format("Player %s saved successfully", player));
     }
 
-    @PatchMapping("{username}")
+    @PatchMapping("/{username}")
     public ResponseEntity<String> updatePlayerPoints(
             @PathVariable String username,
-            @RequestParam Boolean hasAnsweredCorrectly,
-            @RequestParam Integer numAttempts,
-            @RequestParam Long timeTaken) {
+            @RequestBody updatePlayerPointsPayload payload) {
 
         List<Player> players = playerRepository.findByUsername(username);
 
@@ -58,9 +68,9 @@ public class PlayerController {
 
         Player player = players.get(0);
 
-        if (hasAnsweredCorrectly) {
+        if (payload.hasAnsweredCorrectly) {
             final int basePoints = 100;
-            long addedPoints = basePoints / numAttempts + basePoints / timeTaken;
+            long addedPoints = basePoints / payload.numAttempts + basePoints / payload.timeTaken;
             player.setPoints(player.getPoints() + addedPoints);
             playerRepository.save(player);
             return ResponseEntity.ok(String.format("Player has gotten %d points!", addedPoints));
