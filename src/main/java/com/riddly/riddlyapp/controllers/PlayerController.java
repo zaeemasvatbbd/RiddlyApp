@@ -13,7 +13,7 @@ import java.util.List;
 
 
 @RestController
-@RequestMapping("riddly/players")
+@RequestMapping("riddly")
 public class PlayerController {
 
     PlayerRepository playerRepository;
@@ -24,6 +24,7 @@ public class PlayerController {
     @Setter
     static class updatePlayerPointsPayload{
 
+        String username;
         Boolean hasAnsweredCorrectly;
         Integer numAttempts;
         Long timeTaken;
@@ -31,33 +32,32 @@ public class PlayerController {
     }
 
 
-    @GetMapping("")
+    @GetMapping("/players")
     public ResponseEntity<List<Player>> getPlayers() {
         List<Player> players = playerRepository.findAll();
         return players == null ? ResponseEntity.badRequest().build() : ResponseEntity.ok(players);
 
     }
 
-    @GetMapping("/{username}")
-    public ResponseEntity<Player> getPlayer(@PathVariable String username) {
+    @GetMapping("/player")
+    public ResponseEntity<Player> getPlayer(@RequestParam String username) {
         Player player = playerRepository.findByUsername(username);
         return player == null ? ResponseEntity.badRequest().build() :
                ResponseEntity.ok(player);
     }
 
-    @PostMapping("")
+    @PostMapping("/player")
     public ResponseEntity<String> addPlayer(@RequestBody Player player) {
         if (player == null) return ResponseEntity.badRequest().build();
         playerRepository.save(player);
         return ResponseEntity.ok(String.format("Player %s saved successfully", player));
     }
 
-    @PatchMapping("/{username}")
+    @PatchMapping("/player")
     public ResponseEntity<String> updatePlayerPoints(
-            @PathVariable String username,
             @RequestBody updatePlayerPointsPayload payload) {
 
-        Player player = playerRepository.findByUsername(username);
+        Player player = playerRepository.findByUsername(payload.username);
 
         if (player == null)
             return ResponseEntity.badRequest().build();
