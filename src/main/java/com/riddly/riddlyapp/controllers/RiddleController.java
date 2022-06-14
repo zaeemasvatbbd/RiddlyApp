@@ -26,10 +26,10 @@ public class RiddleController {
         this.answeredRiddleRepository = answeredRiddleRepository;
     }
 
-    @GetMapping("/login")
-    public String login(){
-        return "/login";
-    }
+//    @GetMapping("/login")
+//    public String login(){
+//        return "/login";
+//    }
 
     @GetMapping("/noauth")
     public ResponseEntity<?> noAuth() {

@@ -16,14 +16,14 @@ public class SecurityConfig  extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
 
         http.authorizeRequests()
-                .antMatchers("/").permitAll()
+                .antMatchers("/login").permitAll()
                 .anyRequest().authenticated()
                 .and()
                 .oauth2Login()
                 .loginPage("/login")
-                .defaultSuccessUrl("/riddly/riddles")
+                .defaultSuccessUrl("/riddles",true)
                 .failureUrl("/noauth")
-                .permitAll()
+               // .permitAll()
                 .and()
                 .logout().permitAll().and().csrf().disable();
     }

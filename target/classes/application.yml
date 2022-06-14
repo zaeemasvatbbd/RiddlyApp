@@ -10,6 +10,9 @@ spring:
           google:
             clientId: 132049586522-cjl2onfgp8skqfk6tk4a8u9nrj4hoqn8.apps.googleusercontent.com
             clientSecret: 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
+            facebook:
+                        clientId: 737608497558783
+                        clientSecret: 392643622f83355954369a559dc9821e
 
             scope:
               - email
