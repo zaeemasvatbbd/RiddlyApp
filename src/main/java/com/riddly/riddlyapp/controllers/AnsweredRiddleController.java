@@ -15,6 +15,7 @@ import java.util.List;
 public class AnsweredRiddleController {
 
     AnsweredRiddleRepository answerRiddleRepository;
+    private AnsweredRiddleController(AnsweredRiddleRepository answerRiddleRepository) { this.answerRiddleRepository = answerRiddleRepository; }
 
     @GetMapping("")
     public ResponseEntity<List<AnsweredRiddle>> getAnsweredRiddles(
