@@ -17,7 +17,7 @@ public class SwaggerConfig{
     @Bean
     public Docket produceApi(){
         return new Docket(DocumentationType.SWAGGER_2)
-                .host("localhost:8080")
+                .host("ec2-13-246-91-59.af-south-1.compute.amazonaws.com:8080")
                 .apiInfo(apiInfo())
                 .select()
                 .apis(RequestHandlerSelectors.basePackage("com.riddly.riddlyapp"))
